@@ -1,0 +1,29 @@
+go mod init hello
+go run file.go
+go env
+go build (directly builds for GOOS available in the "go env)
+GOOS="os_name" go build (explicitly telling for which os we want the build[windows/linux/darwin etc.])
+
+
+What is lexer?
+
+
+
+
+
+# Memory management
+
+--> Memoy allocation and deallocation happens automatically.
+    GC (Garbage collection) happens automatically.
+    Out of scope or nil.
+
+new(): allocate memory but not INIT (initialization).
+        you will get a memory address.
+        zeroed storage (can't put any data initially).
+
+make(): allocate memory but INIT (initialization).
+        you will get a memory address.
+        non-zeroed storage (can put any data initially).
+
+
+# https://pkg.go.dev/runtime (CPU related topic)
